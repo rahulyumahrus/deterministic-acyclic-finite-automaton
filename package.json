@@ -1,0 +1,17 @@
+{
+  "name": "deterministic-acyclic-finite-automaton",
+  "version": "0.1.0",
+  "description": "Compiles a set of strings into a minimal automaton for compact storage and rapid membership testing.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
