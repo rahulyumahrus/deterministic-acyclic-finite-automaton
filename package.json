@@ -1,6 +1,6 @@
 {
   "name": "deterministic-acyclic-finite-automaton",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Compiles a set of strings into a minimal automaton for compact storage and rapid membership testing.",
   "type": "module",
   "main": "src/index.js",
