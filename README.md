@@ -33,3 +33,10 @@ The trade-off: this library builds the automaton once and then only answers `con
 - `dafda.size: number` — number of distinct words the automaton was built from.
 - `dafda.stateCount: number` — number of states in the minimised automaton.
 - `serialize(dafda: DAFDA): { start: number, states: Array<{ id: number, final: boolean, transitions: Array<[string, number]> }> }` — produce a JSON-safe description. Throws `TypeError` if the argument is not a `DAFDA` instance.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
